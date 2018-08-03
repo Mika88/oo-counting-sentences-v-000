@@ -27,7 +27,14 @@ class String
   end
 
   def count_sentences
-   self.split(" ")
+  
+   self.split(" ").find |do|
+      sentence = []
+      if self.end_with?(".") || self.end_with?("?") || self.end_with?("!")
+        sentence << self
+      end
+   end
+     sentence.count
   end
 end
-binding.pry
+

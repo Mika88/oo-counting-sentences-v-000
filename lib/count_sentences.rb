@@ -29,11 +29,11 @@ class String
   def count_sentences
 
    self.split(" ").find do |word|
-      sentence = []
+      string = []
       if word.end_with?(".") || word.end_with?("?") || word.end_with?("!")
-        sentence << word
+        string << word
       end
    end
-     sentence.count
+     string.count
   end
 end

@@ -27,13 +27,13 @@ class String
   end
 
   def count_sentences
-      string = []
-   self.split(" ").find do |word|
+      sentence = []
+   self.split(" ").each do |word|
       if word.end_with?(".") || word.end_with?("?") || word.end_with?("!")
-        string << word
+        sentence << word
       end
    end
-     string.count
+    sentence.count
   end
 end
 binding.pry

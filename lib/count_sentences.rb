@@ -27,9 +27,8 @@ class String
   end
 
   def count_sentences
-
-   self.split(" ").find do |word|
       string = []
+   self.split(" ").find do |word|
       if word.end_with?(".") || word.end_with?("?") || word.end_with?("!")
         string << word
       end

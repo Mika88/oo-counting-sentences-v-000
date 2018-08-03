@@ -28,10 +28,10 @@ class String
 
   def count_sentences
 
-   self.split(" ").find |do|
+   self.split(" ").find do |word|
       sentence = []
-      if self.end_with?(".") || self.end_with?("?") || self.end_with?("!")
-        sentence << self
+      if word.end_with?(".") || word.end_with?("?") || word.end_with?("!")
+        sentence << word
       end
    end
      sentence.count
